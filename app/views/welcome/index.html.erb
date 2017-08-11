@@ -1,2 +1,40 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+
+<div id="container">
+
+  <div class="ui warning message hide url_present">
+    <i class="close icon"></i>
+    <div class="header">
+      There must be a url!
+    </div>
+  </div>
+
+  <div class="ui warning message hide amazon_url">
+    <i class="close icon"></i>
+    <div class="header">
+      You are not using Amazong URL!.
+    </div>
+  </div>
+
+
+  <form class="ui form">
+    <div class="field">
+      <label>Enter Amazon Product URL</label>
+      <input type="text" name="product_url" placeholder="Product Url" id="product_url" required>
+    </div>
+    <div class="ui button" id="product_save">Submit</div>
+  </form>
+</div>
+
+
+<script>
+  $(document).ready(function () {
+    window.initializeWelcome();
+
+    // close the notification on click
+    $(".close.icon").click(function(){
+      $(this).parent().addClass("hide");
+    });
+
+  });
+
+</script>
