@@ -58,3 +58,4 @@ gem "rest-client"
 gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
 
 gem 'jquery-rails'
+gem "pry"
