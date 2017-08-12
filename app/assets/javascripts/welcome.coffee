@@ -26,6 +26,8 @@ onProductSave = ->
 
       onSuccess = (result, status, jqXHR) ->
         console.log result
+        $("#product_url").val("")
+        $.notify("Product has been added.!", "success");
         NProgress.done();
 
       settings =
